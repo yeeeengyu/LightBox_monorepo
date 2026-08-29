@@ -1,0 +1,8 @@
+drowsiness/*
+eyes-1/*
+final2-1/*
+.venv
+__pycache__
+.env
+*.pt
+models/bestM.pt
