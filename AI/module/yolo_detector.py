@@ -9,7 +9,7 @@ import numpy as np
 
 
 APP_DIR = Path(__file__).resolve().parents[1]
-MODEL_PATH = Path(os.getenv("MODEL_PATH", APP_DIR / "models" / "bestM.pt"))
+MODEL_PATH = Path(os.getenv("MODEL_PATH", APP_DIR / "models" / "best.pt"))
 CONF_THRES = float(os.getenv("CONF_THRES", "0.30"))
 IMGSZ = int(os.getenv("IMGSZ", "480"))
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
