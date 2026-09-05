@@ -201,10 +201,3 @@ async def yawn_ws(websocket: WebSocket):
                 await websocket.send_json({"ok": False, "error": "internal server error"})
     except WebSocketDisconnect:
         pass
-
-# @app.post("/statistic")
-# async def statistic():
-#     doc = list(col.find().sort("timestamp", -1).limit(50))
-#     for d in doc:
-#         d["_id"] = str(d["_id"])
-#     return {"data": doc}
