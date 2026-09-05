@@ -11,7 +11,7 @@ from ultralytics import YOLO
 
 
 APP_DIR = Path(__file__).resolve().parents[1]
-MODEL_PATH = APP_DIR / "models" / "bestM.pt"
+MODEL_PATH = APP_DIR / "models" / "best.pt"
 CONF_THRES = float(os.getenv("CONF_THRES", "0.30"))
 IMGSZ = int(os.getenv("IMGSZ", "480"))
 EAR_THRESH = float(os.getenv("EAR_THRESH", "0.19"))
@@ -133,6 +133,7 @@ def predict_webcam(model: YOLO, device_index: int = 0) -> None:
 
             result = predict(model, frame)
             output = result.plot()
+            output = output.copy()
             draw_ear(frame, output, ear_hist)
 
             now = time.perf_counter()
