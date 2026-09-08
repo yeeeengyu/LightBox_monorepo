@@ -15,7 +15,7 @@ def euclidean(p1, p2) -> float:
 def eye_ear(pts) -> float:
     p1, p2, p3, p4, p5, p6 = pts
     return (euclidean(p2, p6) + euclidean(p3, p5)) / (2.0 * euclidean(p1, p4) + 1e-6)
-MODEL_PATH = os.getenv("MODEL_PATH", "./models/bestM.pt")
+MODEL_PATH = os.getenv("MODEL_PATH", "./models/best.pt")
 DEVICE_INDEX = int(os.getenv("DEVICE_INDEX", "0"))   # 0번 웹캠
 FRAME_W = int(os.getenv("FRAME_W", "640"))
 FRAME_H = int(os.getenv("FRAME_H", "640"))
