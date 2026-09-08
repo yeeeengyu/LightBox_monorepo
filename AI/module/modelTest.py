@@ -133,6 +133,7 @@ def predict_webcam(model: YOLO, device_index: int = 0) -> None:
 
             result = predict(model, frame)
             output = result.plot()
+            output = output.copy()
             draw_ear(frame, output, ear_hist)
 
             now = time.perf_counter()
